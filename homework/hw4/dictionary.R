@@ -3,7 +3,7 @@ library("rjson")
 library("quanteda")
 
 #set working directory
-setwd("/Users/brycedietrich/Dropbox/text_class/homework/homework4/")
+setwd("./")
 
 #read dictionary
 liwc <- dictionary(file = "LIWC2007.txt",format = "LIWC")

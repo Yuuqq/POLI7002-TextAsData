@@ -9,7 +9,7 @@ from nltk.corpus import stopwords
 from nltk.stem.snowball import SnowballStemmer
 
 # set working directory
-wd = "/Users/brycedietrich/Desktop/"
+wd = "./"
 
 html_path = wd + 'lexis.html'
 html_file = codecs.open(html_path, encoding='utf-8')

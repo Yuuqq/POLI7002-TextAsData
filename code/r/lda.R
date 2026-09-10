@@ -11,7 +11,7 @@ library("slam")
 library("topicmodels")
 
 #set working directory
-setwd("/Users/brycedietrich/Dropbox/text_class/lectures/lda/")
+setwd("./")
 
 #load lexis download
 lexis<- fromJSON(file="lexis.json")
