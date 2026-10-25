@@ -30,14 +30,14 @@ with open(wd + 'trump_dtm.csv', 'a', encoding='utf-8') as my_csv:
     data_writer.writerow(word_list)
 
 # create freq list
-for key, value in d.items():
-    if value.get('clean_text') is not None:
-        article_words = word_tokenize(value.get('clean_text'))
-        article_words_frequency = FreqDist(article_words)
-        article_freq_list = []
-        for word in word_list:
-            article_freq_list.append(article_words_frequency[word])
+with open(wd + 'trump_dtm.csv', 'a') as my_csv:
+    data_writer = csv.writer(my_csv)
+    for key, value in d.items():
+        if value.get('clean_text') is not None:
+            article_words = word_tokenize(value.get('clean_text'))
+            article_words_frequency = FreqDist(article_words)
+            article_freq_list = []
+            for word in word_list:
+                article_freq_list.append(article_words_frequency[word])
 
-        with open(wd + 'trump_dtm.csv', 'a') as my_csv:
-            data_writer = csv.writer(my_csv)
             data_writer.writerow(article_freq_list)

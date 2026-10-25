@@ -13,12 +13,12 @@ import os
 # dateStart = "20160101" # starting date
 # dateEnd = "20161231" #ending date
 
-# apiKey = "951312b93d9e42d8b16c699a130fa5ef"
+# apiKey = os.environ.get("NYT_API_KEY", "")
 
-# url = "http://api.nytimes.com/svc/search/v2/articlesearch.json?fq=" + content + "&page=1&begin_date=" + dateStart + "&end_date=" + dateEnd + "&api-key=" + apiKey
+# url = "https://api.nytimes.com/svc/search/v2/articlesearch.json?fq=" + content + "&page=1&begin_date=" + dateStart + "&end_date=" + dateEnd + "&api-key=" + apiKey
 
 # print("The URL is ", url, "\n") # check the url output
-# # http://api.nytimes.com/svc/search/v2/articlesearch.json?fq=obamacare&page=1&begin_date=20160101&end_date=20161231&api-key=951312b93d9e42d8b16c699a130fa5ef
+# # https://api.nytimes.com/svc/search/v2/articlesearch.json?fq=obamacare&page=1&begin_date=20160101&end_date=20161231&api-key=' + os.environ.get('NYT_API_KEY', '')
 
 # response = requests.get(url)
 # data = response.json() 
@@ -61,9 +61,9 @@ while keep_going == True:
 	dateStart = "20160101" # starting date
 	dateEnd = "20160107" #ending date
 
-	apiKey = "951312b93d9e42d8b16c699a130fa5ef"
+	apiKey = os.environ.get("NYT_API_KEY", "")
 
-	url = "http://api.nytimes.com/svc/search/v2/articlesearch.json?fq=" + content + "&page=" + str(page_num) +"&begin_date=" + dateStart + "&end_date=" + dateEnd + "&api-key=" + apiKey
+	url = "https://api.nytimes.com/svc/search/v2/articlesearch.json?fq=" + content + "&page=" + str(page_num) +"&begin_date=" + dateStart + "&end_date=" + dateEnd + "&api-key=" + apiKey
 	
 	response = requests.get(url)	
 	data = response.json()

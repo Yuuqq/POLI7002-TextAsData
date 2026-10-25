@@ -13,7 +13,7 @@ import re
  #from nltk.stem import WordNetLemmatizer
 
 # url
-url = 'http://avalon.law.yale.edu/20th_century/mlk01.asp'
+url = 'https://avalon.law.yale.edu/20th_century/mlk01.asp'
 
 # create soup
 response = requests.get(url)

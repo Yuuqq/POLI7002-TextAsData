@@ -2,7 +2,7 @@ install.packages("RTextTools")
 library(RTextTools)
 
 # Load the data from the csv file
-setwd("/Users/bjdietrich/Dropbox/text_class/lectures/svm/")
+setwd("./")
 data <- read.csv('sunnyData.csv', header = TRUE)
 
 # Create the document term matrix
